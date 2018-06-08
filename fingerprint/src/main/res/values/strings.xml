@@ -1,0 +1,24 @@
+<resources>
+    <string name="fragment__title__sign_in">Sign in</string>
+    <string name="fragment__subtitle__set_pin_code">Set pin code</string>
+    <string name="fragment__subtitle__confirm_pin_code">Confirm pin code</string>
+
+    <string name="fragment__title__pin_code">Pin code</string>
+    <string name="fragment__subtitle__sign_in_pin_code">Sign in pin code</string>
+    <string name="fragment__subtitle__sign_in_pin_code_or_touch_sensor">Sign in pin code or touch the sensor</string>
+
+    <string name="dialog__title__use_fingerprint">Use fingerprint to sign in?</string>
+
+    <string name="dialog__title__sign_in_by_fingerprint">Sign in to the application using your fingerprint</string>
+    <string name="dialog__subtitle__touch_sensor">Touch the sensor</string>
+
+    <string name="dialog__title__pin_code_invalid">Invalid pin code</string>
+
+    <string name="dialog__button__negative">no</string>
+    <string name="dialog__button__positive_yes">yes</string>
+    <string name="dialog__button__positive_ok">ok</string>
+    <string name="dialog__button__neutral">cancel</string>
+
+    <string name="message__fingerprint_new_enrolled">New fingerprint enrolled,\nenter pin again.</string>
+    <string name="message__fingerprint_try_again">Fingerprint not recognized,\ntry again.</string>
+</resources>

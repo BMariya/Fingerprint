@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="text__light">#FFFFFF</color>
+    <color name="text__caption_light">#80FFFFFF</color>
+
+    <color name="pin_code__on">#FFFFFF</color>
+    <color name="pin_code__off">#80FFFFFF</color>
+</resources>

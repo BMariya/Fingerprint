@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="@dimen/margin__small">
+
+        <com.marywaft.fingerprint.view.KeyButtonView
+            android:id="@+id/view__keyboard__kbv_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:key_button_view__value="1"/>
+
+        <com.marywaft.fingerprint.view.KeyButtonView
+            android:id="@+id/view__keyboard__kbv_2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:key_button_view__value="2"
+            app:key_button_view__hint="ABC"/>
+
+        <com.marywaft.fingerprint.view.KeyButtonView
+            android:id="@+id/view__keyboard__kbv_3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:key_button_view__value="3"
+            app:key_button_view__hint="DEF"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="@dimen/margin__small">
+
+        <com.marywaft.fingerprint.view.KeyButtonView
+            android:id="@+id/view__keyboard__kbv_4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:key_button_view__value="4"
+            app:key_button_view__hint="GHI"/>
+
+        <com.marywaft.fingerprint.view.KeyButtonView
+            android:id="@+id/view__keyboard__kbv_5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:key_button_view__value="5"
+            app:key_button_view__hint="JKL"/>
+
+        <com.marywaft.fingerprint.view.KeyButtonView
+            android:id="@+id/view__keyboard__kbv_6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:key_button_view__value="6"
+            app:key_button_view__hint="MNO"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="@dimen/margin__small">
+
+        <com.marywaft.fingerprint.view.KeyButtonView
+            android:id="@+id/view__keyboard__kbv_7"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:key_button_view__value="7"
+            app:key_button_view__hint="PQRS"/>
+
+        <com.marywaft.fingerprint.view.KeyButtonView
+            android:id="@+id/view__keyboard__kbv_8"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:key_button_view__value="8"
+            app:key_button_view__hint="TUV"/>
+
+        <com.marywaft.fingerprint.view.KeyButtonView
+            android:id="@+id/view__keyboard__kbv_9"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:key_button_view__value="9"
+            app:key_button_view__hint="WXYZ"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="@dimen/margin__small">
+
+        <ImageView
+            android:id="@+id/view__keyboard__iv_fingerprint"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_fingerprint"
+            android:contentDescription="@null"/>
+
+        <com.marywaft.fingerprint.view.KeyButtonView
+            android:id="@+id/view__keyboard__kbv_0"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:key_button_view__value="0"/>
+
+        <ImageView
+            android:id="@+id/view__keyboard__iv_back"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_back"
+            android:contentDescription="@null"/>
+    </LinearLayout>
+</LinearLayout>

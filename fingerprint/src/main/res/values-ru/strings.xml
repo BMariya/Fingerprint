@@ -1,0 +1,23 @@
+<resources>
+    <string name="fragment__title__sign_in">Вход</string>
+    <string name="fragment__subtitle__set_pin_code">Придумайте код-пароль</string>
+    <string name="fragment__subtitle__confirm_pin_code">Подтвердите код</string>
+
+    <string name="fragment__title__pin_code">Код-пароль</string>
+    <string name="fragment__subtitle__sign_in_pin_code">Введите код</string>
+    <string name="fragment__subtitle__sign_in_pin_code_or_touch_sensor">Введите код или приложите палец</string>
+
+    <string name="dialog__title__use_fingerprint">Использовать отпечаток пальца для входа?</string>
+
+    <string name="dialog__title__sign_in_by_fingerprint">Войдите в приложение, используя отпечаток пальца</string>
+    <string name="dialog__subtitle__touch_sensor">Прикоснитесь к сенсору</string>
+
+    <string name="dialog__title__pin_code_invalid">Неверный пин код</string>
+
+    <string name="dialog__button__negative">нет</string>
+    <string name="dialog__button__positive_yes">да</string>
+    <string name="dialog__button__neutral">отмена</string>
+
+    <string name="message__fingerprint_new_enrolled">Добавлен новый отпечаток,\nвведите код.</string>
+    <string name="message__fingerprint_try_again">Отпечаток не распознан,\nпопробуйте снова.</string>
+</resources>

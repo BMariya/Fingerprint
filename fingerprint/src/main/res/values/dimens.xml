@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--<dimen name="margin">16dp</dimen>-->
+    <dimen name="margin__large">28dp</dimen>
+    <dimen name="margin__small">4dp</dimen>
+
+    <dimen name="pin_code__size">10dp</dimen>
+</resources>

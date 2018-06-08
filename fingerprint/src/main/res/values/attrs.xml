@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="KeyButtonView">
+        <attr name="key_button_view__value" format="string"/>
+        <attr name="key_button_view__hint" format="string"/>
+    </declare-styleable>
+</resources>

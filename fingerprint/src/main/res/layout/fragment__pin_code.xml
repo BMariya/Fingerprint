@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/fragment__pin_code__tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin__large"
+        style="@style/TextAppearance.AppTheme.Headline.Light"/>
+
+    <TextView
+        android:id="@+id/fragment__pin_code__tv_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin__large"
+        style="@style/TextAppearance.AppTheme.Body1.Light"/>
+
+    <com.marywaft.fingerprint.view.PinCodeView
+        android:id="@+id/fragment__pin_code__pcv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin__large"/>
+
+    <com.marywaft.fingerprint.view.KeyboardView
+        android:id="@+id/fragment__pin_code__kv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>
