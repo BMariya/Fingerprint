@@ -38,3 +38,31 @@ dependencies {
 repositories {
     mavenCentral()
 }
+
+// scripts for uploading lib to bintray and publishing in jcenter/maven
+ext {
+    bintrayRepo = 'github'
+    bintrayName = 'fingerprint'
+
+    publishedGroupId = 'com.marywaft.fingerprint'
+    libraryName = 'fingerprint'
+    artifact = 'fingerprint'
+
+    libraryDescription = 'Set Pin Code and Check Fingerprint'
+
+    siteUrl = 'https://github.com/BMariya/Fingerprint'
+    gitUrl = 'https://github.com/BMariya/Fingerprint.git'
+
+    libraryVersion = '1.0.0'
+
+    developerId = 'marywaft'
+    developerName = 'Mary'
+    developerEmail = 'mary.waft@gmail.com'
+
+    licenseName = 'MIT License'
+    licenseUrl = ''
+    allLicenses = ["MIT"]
+}
+
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
