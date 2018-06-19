@@ -13,7 +13,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.marywaft.fingerprint"
+        applicationId "com.marywaft.fingerprintsample"
         minSdkVersion buildConfig.minSdk
         targetSdkVersion buildConfig.targetSdk
         versionCode buildConfig.version.code
