@@ -1,4 +1,7 @@
 <resources>
+    <string name="activity__sample__set_pin_code">Установить пин-код</string>
+    <string name="activity__sample__check_pin_code">Проверить пин-код</string>
+
     <string name="fragment__title__sign_in">Вход</string>
     <string name="fragment__subtitle__set_pin_code">Придумайте код-пароль</string>
     <string name="fragment__subtitle__confirm_pin_code">Подтвердите код</string>

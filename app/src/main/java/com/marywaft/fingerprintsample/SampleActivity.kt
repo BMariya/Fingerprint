@@ -2,39 +2,39 @@ package com.marywaft.fingerprintsample
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import android.widget.Toast
-import com.marywaft.fingerprint.PinCodeFragment
+import kotlinx.android.synthetic.main.activity__sample.*
 
-class SampleActivity : AppCompatActivity(), PinCodeFragment.PinCodeInteractionListener {
-    private val _pinCodeFragmentTag = "_fragment_tag__pin_code"
-
-    private var pinCodeFragment: PinCodeFragment? = null
-
+class SampleActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity__sample)
 
-        pinCodeFragment = supportFragmentManager.findFragmentByTag(_pinCodeFragmentTag) as PinCodeFragment?
-        if (pinCodeFragment == null) {
-            pinCodeFragment = PinCodeFragment.createCheckPinCode()
+        activity__sample__btn_set_pin_code.setOnClickListener { showSetPinCodeFragment() }
+        activity__sample__btn_check_pin_code.setOnClickListener { showCheckPinCodeFragment() }
+    }
+
+    private fun showSetPinCodeFragment() {
+        var fragment = supportFragmentManager.findFragmentByTag(FRAGMENT_TAG__SET_PIN_CODE) as SetPinCodeFragment?
+        if (fragment == null) {
+            fragment = SetPinCodeFragment.create()
             supportFragmentManager.beginTransaction()
-                    .replace(R.id.activity__sample__content, pinCodeFragment, _pinCodeFragmentTag)
+                    .replace(R.id.activity__sample__fl_content, fragment, FRAGMENT_TAG__SET_PIN_CODE)
                     .commit()
         }
     }
 
-    override fun onPinCodeSetUp() {
-        Toast.makeText(this, "onPinCodeSetUp", Toast.LENGTH_LONG).show()
-    }
-    override fun onPinCodeChecked() {
-        Toast.makeText(this, "onPinCodeChecked", Toast.LENGTH_LONG).show()
+    private fun showCheckPinCodeFragment() {
+        var fragment = supportFragmentManager.findFragmentByTag(FRAGMENT_TAG__CHECK_PIN_CODE) as CheckPinCodeFragment?
+        if (fragment == null) {
+            fragment = CheckPinCodeFragment.create()
+            supportFragmentManager.beginTransaction()
+                    .replace(R.id.activity__sample__fl_content, fragment, FRAGMENT_TAG__CHECK_PIN_CODE)
+                    .commit()
+        }
     }
 
-    override fun onFingerprintEnabled() {
-        Toast.makeText(this, "onFingerprintEnabled", Toast.LENGTH_LONG).show()
-    }
-
-    override fun onFingerprintDisabled() {
-        Toast.makeText(this, "onFingerprintDisabled", Toast.LENGTH_LONG).show()
+    companion object {
+        private const val FRAGMENT_TAG__SET_PIN_CODE = "_fragment_tag__set_pin_code"
+        private const val FRAGMENT_TAG__CHECK_PIN_CODE = "_fragment_tag__check_pin_code"
     }
 }

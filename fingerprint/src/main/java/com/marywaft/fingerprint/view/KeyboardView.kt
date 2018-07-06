@@ -19,9 +19,7 @@ class KeyboardView constructor(
         context: Context,
         attrs: AttributeSet? = null
 ) : LinearLayout(context, attrs) {
-    private val _keyButtonCount = 10
-
-    private val arrayKeyButtonView = arrayOfNulls<KeyButtonView>(_keyButtonCount)
+    private val keyButtonViewArray = arrayOfNulls<KeyButtonView>(KEY_BUTTON_COUNT)
     private var fingerprintImageView: ImageView
     private var backImageView: ImageView
 
@@ -49,23 +47,21 @@ class KeyboardView constructor(
     init {
         LayoutInflater.from(context).inflate(R.layout.view__keyboard, this)
 
-        arrayKeyButtonView[0] = findViewById(R.id.view__keyboard__kbv_0)
-        arrayKeyButtonView[1] = findViewById(R.id.view__keyboard__kbv_1)
-        arrayKeyButtonView[2] = findViewById(R.id.view__keyboard__kbv_2)
-        arrayKeyButtonView[3] = findViewById(R.id.view__keyboard__kbv_3)
-        arrayKeyButtonView[4] = findViewById(R.id.view__keyboard__kbv_4)
-        arrayKeyButtonView[5] = findViewById(R.id.view__keyboard__kbv_5)
-        arrayKeyButtonView[6] = findViewById(R.id.view__keyboard__kbv_6)
-        arrayKeyButtonView[7] = findViewById(R.id.view__keyboard__kbv_7)
-        arrayKeyButtonView[8] = findViewById(R.id.view__keyboard__kbv_8)
-        arrayKeyButtonView[9] = findViewById(R.id.view__keyboard__kbv_9)
+        keyButtonViewArray[0] = findViewById(R.id.view__keyboard__kbv_0)
+        keyButtonViewArray[1] = findViewById(R.id.view__keyboard__kbv_1)
+        keyButtonViewArray[2] = findViewById(R.id.view__keyboard__kbv_2)
+        keyButtonViewArray[3] = findViewById(R.id.view__keyboard__kbv_3)
+        keyButtonViewArray[4] = findViewById(R.id.view__keyboard__kbv_4)
+        keyButtonViewArray[5] = findViewById(R.id.view__keyboard__kbv_5)
+        keyButtonViewArray[6] = findViewById(R.id.view__keyboard__kbv_6)
+        keyButtonViewArray[7] = findViewById(R.id.view__keyboard__kbv_7)
+        keyButtonViewArray[8] = findViewById(R.id.view__keyboard__kbv_8)
+        keyButtonViewArray[9] = findViewById(R.id.view__keyboard__kbv_9)
         fingerprintImageView = findViewById(R.id.view__keyboard__iv_fingerprint)
         backImageView = findViewById(R.id.view__keyboard__iv_back)
 
-        for (keyButtonView in arrayKeyButtonView) {
-            keyButtonView?.setOnClickListener(onClickListener)
-        }
-        backImageView.setOnClickListener(onClickListener)
+        keyButtonViewArray.forEach { it?.setOnClickListener(onClickListener) }
+        backImageView.setOnClickListener { onClickListener }
 
         setFingerprintEnabled(false)
     }
@@ -95,6 +91,10 @@ class KeyboardView constructor(
                 vibe.vibrate(vibrateTimeInMillis)
             }
         }
+    }
+
+    companion object {
+        private const val KEY_BUTTON_COUNT = 10
     }
 
     /**

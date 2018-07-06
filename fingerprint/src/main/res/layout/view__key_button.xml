@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -9,11 +10,13 @@
         android:id="@+id/view__key_button__tv_value"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        style="@style/TextAppearance.AppTheme.Display1.Light"/>
+        style="@style/TextAppearance.AppTheme.Display1.Light"
+        tools:text="1"/>
 
     <TextView
         android:id="@+id/view__key_button__tv_hint"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        style="@style/TextAppearance.AppTheme.Caption.Light"/>
+        style="@style/TextAppearance.AppTheme.Caption.Light"
+        tools:text="ABC"/>
 </LinearLayout>

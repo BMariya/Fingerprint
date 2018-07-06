@@ -15,13 +15,16 @@ import com.marywaft.fingerprint.data.Settings
  */
 class Injection {
     companion object {
-        fun provideDataSource(context: Context): IDataSource = DataSource.getInstance(context)
+        fun provideDataSource(context: Context): IDataSource =
+                DataSource.getInstance(context)
 
-        fun provideSettings(context: Context): ISettings = Settings.getInstance(context)
+        fun provideSettings(context: Context): ISettings =
+                Settings.getInstance(context)
 
         fun provideFingerprintManager(context: Context): IFingerprintManager =
                 FingerprintManager.getInstance(context)
 
-        fun provideKeyManager(): IKeyManager = KeyManager.getInstance()
+        fun provideKeyManager():IKeyManager =
+                KeyManager.getInstance()
     }
 }
